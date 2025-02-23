@@ -55,7 +55,5 @@ This analysis of **2024 CO₂ emissions** provided key insights into global emis
    
 ---
 
-## 📜 License
 
-This project is open-source and free to use.
 
