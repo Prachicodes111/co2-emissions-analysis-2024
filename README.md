@@ -29,7 +29,17 @@ This project analyzes **global CO₂ emissions for 2024** using **MySQL**. The a
 - **China, ROW, and the U.S.** were the top three emitters in 2024.  
 - The **Power and Industry** sectors contributed the most to emissions.  
 - Some sectors and countries saw a decline in emissions compared to 2023, indicating potential shifts in energy usage or policy impacts.  
-- **For an in-depth comparison, refer to the attached .txt file in this repository.**  
+
+## 📌 Conclusion  
+
+This analysis of **2024 CO₂ emissions** provided key insights into global emission patterns, sectoral contributions, and country-wise trends. The total emissions in **2024 (38,013.13 MtCO₂)** showed a slight **increase from 2023 (37,400 MtCO₂)**.  
+
+- **China, ROW, and the U.S.** remained the top emitters, with power and industry sectors contributing the most.  
+- Some countries and sectors experienced a decline, possibly due to policy changes, energy transitions, or economic shifts.  
+- The data highlights the importance of continued monitoring and mitigation efforts to address climate change.  
+
+📌 **For a detailed year-over-year comparison, check the attached .txt file in this repository.**  
+
 
 ## 🚀 How to Use  
 
