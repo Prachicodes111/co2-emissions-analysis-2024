@@ -38,7 +38,7 @@ This analysis of **2024 CO₂ emissions** provided key insights into global emis
 - Some countries and sectors experienced a decline, possibly due to policy changes, energy transitions, or economic shifts.  
 - The data highlights the importance of continued monitoring and mitigation efforts to address climate change.  
 
-📌 **For a detailed year-over-year comparison, check the attached .txt file in this repository.**  
+📌 **For a detailed year-over-year comparison, check the attached .pdf file in this repository.**  
 
 
 ## 🚀 How to Use  
