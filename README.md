@@ -1,5 +1,7 @@
 # 🌍 CO₂ Emissions EDA (2024) with MySQL
 
+# This EDA provides data-driven insights into emission trends, helping policymakers, industries, and researchers strategize for a more sustainable future. 🌱🌍♻️
+
 ## 📌 Overview  
 This project analyzes **global CO₂ emissions for 2024** using **MySQL**. The analysis covers **total emissions, sector-wise and country-wise trends, monthly emission trends**, and compares findings with **2023 data from external sources** to identify key differences.  
 
