@@ -8,27 +8,30 @@ ALTER TABLE global RENAME COLUMN MtCO2_per_day TO value;
 
 # Overall CO₂ Emissions Analysis
 -----------------------------------
-
-# Total CO₂ Emissions 2024
+# 1) Total CO₂ Emissions 2024
+    
 SELECT SUM(value) AS total_emissions 
 FROM global
 WHERE country != 'World';
 
-# Total CO₂ Emissions by Country in 2024
+# 2) Total CO₂ Emissions by Country in 2024
+    
 SELECT country, SUM(value) AS total_emissions
 FROM global
 WHERE country != 'World'  
 GROUP BY country
 ORDER BY total_emissions DESC;
 
-# CO₂ Emissions by Sector
+# 3) CO₂ Emissions by Sector
+    
 SELECT sector, SUM(value) AS total_emissions 
 FROM global
 WHERE country != 'World'  
 GROUP BY sector 
 ORDER BY total_emissions DESC;
 
-# Top 10 Countries with Highest CO₂ Emissions
+# 4) Top 10 Countries with Highest CO₂ Emissions
+    
 SELECT country, total_emissions, ranking
 FROM (
     SELECT 
@@ -41,7 +44,7 @@ FROM (
 ) ranked_data
 WHERE ranking <= 10;
 
-# Average Emissions per Country & Sector
+#5) Average Emissions per Country 
 SELECT 
     country, 
     AVG(value) AS avg_emission 
@@ -51,6 +54,7 @@ GROUP BY country
 ORDER BY avg_emission DESC 
 LIMIT 10;
 
+#6)Average Emissions per Sector
 SELECT 
     sector, 
     AVG(value) AS avg_emission 
@@ -60,7 +64,7 @@ GROUP BY sector
 ORDER BY avg_emission DESC 
 LIMIT 10;
 
-# Top 5 Sectors with Highest CO₂ Emissions
+#7) Top 5 Sectors with Highest CO₂ Emissions
 SELECT 
     sector, 
     SUM(value) AS total_emission 
@@ -70,7 +74,8 @@ GROUP BY sector
 ORDER BY total_emission DESC 
 LIMIT 5;
 
-# Sector-Wise CO₂ Emissions Distribution
+#8) Sector-Wise CO₂ Emissions Distribution (%)
+    
 SELECT 
     sector, 
     SUM(value) AS total_emission, 
@@ -80,7 +85,8 @@ WHERE country != 'World'
 GROUP BY sector 
 ORDER BY total_emission DESC;
 
-# Monthly CO₂ Emissions Trends
+#9) Monthly CO₂ Emissions Trends
+    
 SELECT 
     MONTHNAME(STR_TO_DATE(date, '%d-%m-%Y')) AS month_name, 
     SUM(value) AS total_emission
@@ -88,7 +94,8 @@ FROM global
 WHERE country != 'World'
 GROUP BY month_name;
 
-# Country-Specific CO₂ Emissions by Sector (TOP 5 are China, ROW, United States, India, EU27 & UK)
+#10) Country-Specific CO₂ Emissions by Sector (TOP 5 are China, ROW, United States, India, EU27 & UK)
+    
 SELECT sector, SUM(value) AS total_emission
 FROM global
 WHERE country = 'China'
