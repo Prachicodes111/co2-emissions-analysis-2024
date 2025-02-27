@@ -7,7 +7,7 @@ This EDA provides data-driven insights into emission trends, helping policymaker
 This project analyzes **global CO₂ emissions for 2024** using **MySQL**. The analysis covers **total emissions, sector-wise and country-wise trends, monthly emission trends**, and compares findings with **2023 data from external sources** to identify key differences.  
 
 ## 📊 Dataset  
-- **2024 Data:** Used a dataset containing global CO₂ emissions data across various sectors and countries .  
+- **2024 Data:** Used a near-real-time dataset containing global CO₂ emissions data across different sectors and regions around the world .
 - **2023 Data:** Used for comparison, sourced from external reports.  
 
 ## 🛠 Technologies Used  
