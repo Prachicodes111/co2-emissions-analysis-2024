@@ -125,3 +125,45 @@ FROM global
 WHERE country = 'EU27 & UK'
 GROUP BY sector
 ORDER BY total_emission DESC;
+
+## 2024 CO₂ emissions for ROW 2024:
+select * from global
+where country = 'ROW';
+
+-------------------------------------------------------------------------------------------------------------------------
+
+##Total CO₂ emissions for ROW( REST OF THE WORLD) in 2024 ##
+
+SELECT SUM(value) AS total_emissions_2024
+FROM GLOBAL
+where country='ROW';
+
+# 1) Monthly CO₂ emissions trends for ROW in 2024
+    
+SELECT 
+    DATE_FORMAT(STR_TO_DATE(date, '%d-%m-%Y'), '%Y-%m') AS month,
+    SUM(value) AS total_emission
+FROM global
+where country='ROW'
+GROUP BY month
+ORDER BY month;
+
+#2) Sector-wise CO₂ emissions for ROW in 2024
+SELECT 
+    sector, 
+    SUM(value) AS total_emission
+FROM global
+where country = 'ROW'
+GROUP BY sector
+ORDER BY total_emission DESC;
+
+#3) Top 5 sectors contributing to CO₂ emissions for ROW in 2024
+SELECT 
+    sector, 
+    SUM(value) AS total_emission
+FROM global
+where country= 'ROW'
+GROUP BY sector
+ORDER BY total_emission DESC
+LIMIT 5;
+
