@@ -11,7 +11,8 @@ This project analyzes **global CO₂ emissions for 2024** using **MySQL**. The a
 - **2023 Data:** Used for comparison, sourced from external reports .  
 
 ## 🛠 Technologies Used  
-- **SQL (MySQL)**  
+- **SQL (MySQL)**
+- **Data cleaning**  
 - **Data Analysis & Aggregation**  
 - **Comparative Analysis**  
 
